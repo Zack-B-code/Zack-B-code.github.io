@@ -9,7 +9,8 @@ var ballSpeed = 3;
 
 var p1score = 0;
 var p2score = 0;
-var scoredisplay = ""
+var scoredisplay = "";
+context.font = "50px serif";
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -107,7 +108,7 @@ function loop() {
       p2score += 1
     }
     scoredisplay = p1score + " - " + p2score;
-    context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 80 ,(canvas.height / 2 - paddleHeight / 2) - 80)
+    context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
 
     ball.resetting = true;
 
@@ -147,6 +148,9 @@ function loop() {
   for (let i = grid; i < canvas.height - grid; i += grid * 2) {
     context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
   }
+
+  scoredisplay = p1score + " - " + p2score;
+  context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
 }
 
 // listen to keyboard events to move the paddles
