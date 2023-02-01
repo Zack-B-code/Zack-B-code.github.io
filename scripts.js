@@ -107,7 +107,7 @@ function loop() {
     if (ball.x > canvas.width) {
       p2score += 1
     }
-    scoredisplay = p1score + " - " + p2score;
+    scoredisplay = p2score + " - " + p1score;
     context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
 
     ball.resetting = true;
@@ -149,7 +149,7 @@ function loop() {
     context.fillRect(canvas.width / 2 - grid / 2, i, grid, grid);
   }
 
-  scoredisplay = p1score + " - " + p2score;
+  scoredisplay = p2score + " - " + p1score;
   context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
 }
 
