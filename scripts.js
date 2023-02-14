@@ -13,6 +13,7 @@ var scoredisplay = "";
 context.font = "50px serif";
 
 var frameRequest;
+var isGameOver = 0;
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -58,8 +59,35 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
+// Returns if the player's score has won
 function playerVictory(playerScore) {
     return (playerScore >= 7);
+}
+
+// Creates a game over screen
+function gameOverScreen(playerNumber) {
+  cancelAnimationFrame(frameRequest);
+  isGameOver = 1;
+  context.textAlign = "center";
+  context.fillStyle = "rgba(0, 0, 0, 0.7)";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.fillStyle = "White";
+  context.fillText("Game Over", canvas.width / 2, canvas.height / 4);
+  context.fillText("Player " + playerNumber + " Won!", canvas.width / 2, canvas.height / 2);
+  context.fillText("Play again", canvas.width / 2, canvas.height * (3 / 4));
+  // Visual box for where clickable area is.
+  context.fillStyle = "rgba(160, 160, 160, 0.4)";
+  context.fillRect(canvas.width * (1/3), canvas.height * (3 / 4) - 50, 250, 75);
+  // Listener for clicks
+  canvas.addEventListener('click', getCursorPosition);
+}
+
+// Resets the game for play again
+function resetGame() {
+  canvas.removeEventListener('click', getCursorPosition);
+  p1score = 0;
+  p2score = 0;
+  frameRequest = requestAnimationFrame(loop);
 }
 
 // game loop
@@ -158,20 +186,8 @@ function loop() {
   scoredisplay = p2score + " - " + p1score;
   context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
   
-  if (playerVictory(p1score)) {
-    cancelAnimationFrame(frameRequest);
-    context.fillStyle = "rgba(0, 0, 0, 0.7)";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "White";
-    context.fillText("Player 1 Won!", canvas.width / 3, canvas.height / 2);
-  }
-  if (playerVictory(p2score)) {
-    cancelAnimationFrame(frameRequest);
-    context.fillStyle = "rgba(0, 0, 0, 0.7)";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "White";
-    context.fillText("Player 2 Won!", canvas.width / 3, canvas.height / 2);
-  }
+  if (playerVictory(p1score)) gameOverScreen(1);
+  if (playerVictory(p2score)) gameOverScreen(2);
 }
 
 // listen to keyboard events to move the paddles
@@ -206,6 +222,20 @@ document.addEventListener('keyup', function(e) {
     leftPaddle.dy = 0;
   }
 });
+
+function getCursorPosition(event) {
+  let rect = canvas.getBoundingClientRect();
+  let x = event.clientX - rect.left;
+  let y = event.clientY - rect.top;
+  if (isPlayAgainPressed(x,y)) resetGame();
+}
+
+function isPlayAgainPressed(x, y) {
+  return  ((y > (canvas.height * (3 / 4) - 50)) &&
+          (y < (canvas.height * (3 / 4) - 50 + 75)) &&
+          (x > (canvas.width * (1/3))) &&
+          (x < (canvas.width * (1/3) + 250)));
+}
 
 // start the game
 frameRequest = requestAnimationFrame(loop);
