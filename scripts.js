@@ -12,6 +12,8 @@ var p2score = 0;
 var scoredisplay = "";
 context.font = "50px serif";
 
+var frameRequest;
+
 const leftPaddle = {
   // start in the middle of the game on the left side
   x: grid * 2,
@@ -56,9 +58,13 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
+function playerVictory(playerScore) {
+    return (playerScore >= 7);
+}
+
 // game loop
 function loop() {
-  requestAnimationFrame(loop);
+  frameRequest = requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
 
   // move paddles by their velocity
@@ -151,6 +157,21 @@ function loop() {
 
   scoredisplay = p2score + " - " + p1score;
   context.fillText(scoredisplay, (canvas.width / 2 - grid / 2) - 300 ,(canvas.height / 2 - paddleHeight / 2) - 200)
+  
+  if (playerVictory(p1score)) {
+    cancelAnimationFrame(frameRequest);
+    context.fillStyle = "rgba(0, 0, 0, 0.7)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "White";
+    context.fillText("Player 1 Won!", canvas.width / 3, canvas.height / 2);
+  }
+  if (playerVictory(p2score)) {
+    cancelAnimationFrame(frameRequest);
+    context.fillStyle = "rgba(0, 0, 0, 0.7)";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "White";
+    context.fillText("Player 2 Won!", canvas.width / 3, canvas.height / 2);
+  }
 }
 
 // listen to keyboard events to move the paddles
@@ -187,4 +208,4 @@ document.addEventListener('keyup', function(e) {
 });
 
 // start the game
-requestAnimationFrame(loop);
+frameRequest = requestAnimationFrame(loop);
