@@ -25,6 +25,15 @@ const leftPaddle = {
   // paddle velocity
   dy: 0
 };
+
+function BotMovesPaddle(paddle) {
+  ballRegion = Math.floor(ball.y / 34);
+  paddleRegion = Math.floor(paddle.y / 34);
+  if (ballRegion < paddleRegion) paddle.dy = -paddleSpeed; 
+  if (ballRegion > paddleRegion) paddle.dy = paddleSpeed; 
+  if (ballRegion === paddleRegion) paddle.dy = 0; 
+}
+
 const rightPaddle = {
   // start in the middle of the game on the right side
   x: canvas.width - grid * 3,
@@ -35,6 +44,7 @@ const rightPaddle = {
   // paddle velocity
   dy: 0
 };
+
 const ball = {
   // start in the middle of the game
   x: canvas.width / 2,
@@ -94,6 +104,14 @@ function resetGame() {
 function loop() {
   frameRequest = requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
+
+  if (ball.dx < 0) {
+    BotMovesPaddle(leftPaddle);
+  }
+  // Uncomment for using bot with right paddle
+  // if (ball.dx > 0) {
+  //   BotMovesPaddle(rightPaddle);
+  // }
 
   // move paddles by their velocity
   leftPaddle.y += leftPaddle.dy;
@@ -157,6 +175,7 @@ function loop() {
   // check to see if ball collides with paddle. if they do change x velocity
   if (collides(ball, leftPaddle)) {
     ball.dx *= -1;
+    leftPaddle.dy = 0;
 
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
@@ -164,6 +183,8 @@ function loop() {
   }
   else if (collides(ball, rightPaddle)) {
     ball.dx *= -1;
+    // Uncomment for using bot with right paddle
+    // rightPaddle.dy = 0;
 
     // move ball next to the paddle otherwise the collision will happen again
     // in the next frame
@@ -202,14 +223,15 @@ document.addEventListener('keydown', function(e) {
     rightPaddle.dy = paddleSpeed;
   }
 
+  // Left paddle keys depreciated due to using bot instead now
   // w key
-  if (e.which === 87) {
-    leftPaddle.dy = -paddleSpeed;
-  }
+  // if (e.which === 87) {
+  //   leftPaddle.dy = -paddleSpeed;
+  // }
   // a key
-  else if (e.which === 83) {
-    leftPaddle.dy = paddleSpeed;
-  }
+  // else if (e.which === 83) {
+  //   leftPaddle.dy = paddleSpeed;
+  // }
 });
 
 // listen to keyboard events to stop the paddle if key is released
@@ -218,9 +240,10 @@ document.addEventListener('keyup', function(e) {
     rightPaddle.dy = 0;
   }
 
-  if (e.which === 83 || e.which === 87) {
-    leftPaddle.dy = 0;
-  }
+  // Left paddle keys depreciated due to using bot instead now
+  // if (e.which === 83 || e.which === 87) {
+  //   leftPaddle.dy = 0;
+  // }
 });
 
 function getCursorPosition(event) {
