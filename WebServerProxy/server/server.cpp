@@ -1,5 +1,4 @@
-/* CS 447 Network Communications (Spring 2024) */
-/* the sample server process (for Project #1)  */
+/* the sample server process  */
 
 // Updated for Visual Studio 2019
 // include link-library: wsock32.lib or ws2_32.lib (from Project Properties)
