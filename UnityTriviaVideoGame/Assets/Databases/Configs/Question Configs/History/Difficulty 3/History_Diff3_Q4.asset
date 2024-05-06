@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676339f434503874aac1f2acb75ab51a, type: 3}
+  m_Name: History_Diff3_Q4
+  m_EditorClassIdentifier: 
+  questionText: Who is generally considered to be the first Prime Minister of the
+    United Kingdom
+  answerAText: Henry Pelham
+  answerBText: Robert Walpole
+  answerCText: Spencer Compton
+  answerDText: William Cavendish
+  correctAnswer: 1
+  difficulty: 3
+  questionCategory: History

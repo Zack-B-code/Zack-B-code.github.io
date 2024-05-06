@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676339f434503874aac1f2acb75ab51a, type: 3}
+  m_Name: History_Diff3_Q1
+  m_EditorClassIdentifier: 
+  questionText: The Gadsden Purchase gave the United States the land that would become
+    what states?
+  answerAText: Arizona & New Mexico
+  answerBText: Texas & Oklahoma
+  answerCText: Mississippi & Alabama
+  answerDText: California & Utah
+  correctAnswer: 0
+  difficulty: 3
+  questionCategory: History
