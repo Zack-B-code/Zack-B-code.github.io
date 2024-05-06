@@ -1,5 +1,4 @@
-/* CS 447 Network Communications (Spring 2024)                               */
-/* clien_2023.cpp: the sample client process (for Project #1)                */
+/* client_2023.cpp: the sample client process (for Project #1)                */
 
 // Updated for Visual Studio 2019
 // Include link-library: wsock32.lib or ws2_32.lib (from Project Properties)
