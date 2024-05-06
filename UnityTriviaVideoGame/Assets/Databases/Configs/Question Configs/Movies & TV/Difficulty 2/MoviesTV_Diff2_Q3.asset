@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21abb3aca22c4ef4c9988d07649de0ea, type: 3}
+  m_Name: MoviesTV_Diff2_Q3
+  m_EditorClassIdentifier: 
+  questionText: 'What song plays over the opening credits of "Guardians of the Galaxy"? '
+  answerAText: I Want You Back
+  answerBText: Hooked on a Feeling
+  answerCText: Come and Get Your Love
+  answerDText: Since U Been Gone
+  correctAnswer: 2
+  difficulty: 2
+  questionCategory: Movies & TV

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21abb3aca22c4ef4c9988d07649de0ea, type: 3}
+  m_Name: MoviesTV_Diff1_Q6
+  m_EditorClassIdentifier: 
+  questionText: "Which isn\u2019t a core rule for handling a Mogwai in \"Gremlins\"?"
+  answerAText: Do not feed it after midnight
+  answerBText: Do not expose it to bright lights
+  answerCText: Do not let it get wet
+  answerDText: Do not let it get cold
+  correctAnswer: 3
+  difficulty: 1
+  questionCategory: Movies & TV
