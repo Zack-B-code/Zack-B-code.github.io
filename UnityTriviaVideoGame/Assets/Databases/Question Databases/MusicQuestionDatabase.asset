@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f172b0636c53f11499bb51570dbff94d, type: 3}
+  m_Name: MusicQuestionDatabase
+  m_EditorClassIdentifier: 
+  difficulty0Questions:
+  - {fileID: 11400000, guid: 34481925829f66b4baf22797a54898d1, type: 2}
+  - {fileID: 11400000, guid: 36f8f14e0acf72d449f573c206db5fbc, type: 2}
+  - {fileID: 11400000, guid: 4a51e5782ed01d34e928e722a3f5f5b7, type: 2}
+  - {fileID: 11400000, guid: 97b4e8397dc5aa14fbb510e4300c3929, type: 2}
+  - {fileID: 11400000, guid: b2ff7f214db90ed4ba8743bf47324d6a, type: 2}
+  - {fileID: 11400000, guid: eb1e1f3155c588f46b3409de5a69795b, type: 2}
+  - {fileID: 11400000, guid: 1820239662df6e64b80bb8122394b292, type: 2}
+  - {fileID: 11400000, guid: d635cad496c579f478da650295171a66, type: 2}
+  difficulty1Questions:
+  - {fileID: 11400000, guid: 32c5a0efceff29843b8183fac8ddf803, type: 2}
+  - {fileID: 11400000, guid: 6b8dabf923728ff49a2da708b54adca5, type: 2}
+  - {fileID: 11400000, guid: 1b51846a26873dd418c041a2ede427aa, type: 2}
+  - {fileID: 11400000, guid: 6935c9fc17bd3bf498aa9b9075bd3c79, type: 2}
+  - {fileID: 11400000, guid: d596bce127655d44a9edfd63df097202, type: 2}
+  - {fileID: 11400000, guid: 77244355b886eec41bff93cff2d6effc, type: 2}
+  - {fileID: 11400000, guid: e43bf053760daf744b1f5999b066dd30, type: 2}
+  - {fileID: 11400000, guid: ab3e73a798c626349a9e800de4e7a27d, type: 2}
+  difficulty2Questions:
+  - {fileID: 11400000, guid: 62e478a8aea5bf54795dd33d3644cab7, type: 2}
+  - {fileID: 11400000, guid: 595147efa1cc4634d81e0cc779ead85d, type: 2}
+  - {fileID: 11400000, guid: e6151aa7b775f8f44bebda46287e2c68, type: 2}
+  - {fileID: 11400000, guid: bfbaa7cade0384143b8a309e89825463, type: 2}
+  - {fileID: 11400000, guid: 54ad221ca3da11643892c38ec4c896fd, type: 2}
+  - {fileID: 11400000, guid: 4fca4ac5d735f4943afd4d3df33db2b9, type: 2}
+  - {fileID: 11400000, guid: 4a868ca338bc91847a6fa538474ede70, type: 2}
+  - {fileID: 11400000, guid: da1b576d21bc9e44d8d5f3a03602ee4e, type: 2}
+  difficulty3Questions:
+  - {fileID: 11400000, guid: f715cef6626a16d4b8647be1b4a6a1dc, type: 2}
+  - {fileID: 11400000, guid: 48d7de148cf471647b1060ab75432caa, type: 2}
+  - {fileID: 11400000, guid: 4d05b82a76c7f9247991a12487922f0f, type: 2}
+  - {fileID: 11400000, guid: de94ff76c5be11b40ad1a7773ded848b, type: 2}
+  - {fileID: 11400000, guid: 87bd8d0442c1b30429371bf63908fabf, type: 2}
+  - {fileID: 11400000, guid: e3d9fcbcbe710f049a722c024d0d086c, type: 2}
+  - {fileID: 11400000, guid: 8077ba4ff97c8134ab00e27490a40a70, type: 2}
+  - {fileID: 11400000, guid: e02f687d82022414baee15c6f5639ba6, type: 2}
