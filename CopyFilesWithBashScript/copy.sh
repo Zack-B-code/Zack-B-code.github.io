@@ -9,7 +9,7 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-# Assign source and destination folders
+# Assign source and destination folders to command line input
 source_folder=$1
 destination_folder=$2
 
