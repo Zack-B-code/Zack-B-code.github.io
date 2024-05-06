@@ -1,4 +1,4 @@
-//====================================================== file = weblite.c =====
+//====================================================== file = web_server.c =====
 //=  A super light weight HTTP server                                         =
 //=============================================================================
 //=  Notes:                                                                   =
@@ -20,10 +20,10 @@
 //=   3) The only output (to stdout) from weblite is a message with the       =
 //=      of the file currently being sent                                     =
 //=---------------------------------------------------------------------------=
-//=  Build: bcc32 weblite.c, cl weblite.c wsock32.lib (or ws2_32.lib)         =
-//=         gcc weblite.c -lsocket -lnsl for BSD                              =
+//=  Build: bcc32 web_server.c, cl web_server.c wsock32.lib (or ws2_32.lib)         =
+//=         gcc web_server.c -lsocket -lnsl for BSD                              =
 //=---------------------------------------------------------------------------=
-//=  Execute: weblite                                                         =
+//=  Execute: web_server                                                         =
 //=---------------------------------------------------------------------------=
 //=  History:  KJC (12/29/00) - Genesis (from server.c)                       =
 //=            HF (01/25/01) - Ported to multi-platform environment           =
