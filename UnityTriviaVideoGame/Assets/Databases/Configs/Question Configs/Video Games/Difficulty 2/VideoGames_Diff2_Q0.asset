@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa2ecf2b3eaa36439e9e64487584562, type: 3}
+  m_Name: VideoGames_Diff2_Q0
+  m_EditorClassIdentifier: 
+  questionText: What was the first video game console to come with a built-in Ethernet
+    port?
+  answerAText: Sega Dreamcast
+  answerBText: Sony PlayStation 2
+  answerCText: Microsoft Xbox
+  answerDText: Sony PlayStation 3
+  correctAnswer: 0
+  difficulty: 2
+  questionCategory: Video Games
