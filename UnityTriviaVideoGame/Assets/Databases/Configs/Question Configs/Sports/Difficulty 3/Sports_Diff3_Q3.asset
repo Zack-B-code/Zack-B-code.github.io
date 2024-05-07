@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef85e673f01023e4d8928e3ff73d3334, type: 3}
+  m_Name: Sports_Diff3_Q3
+  m_EditorClassIdentifier: 
+  questionText: "In which winter sport are the terms \u201Cstale fish\u201D and \u201Cmule
+    kick\u201D used? "
+  answerAText: Skateboarding
+  answerBText: Swimming
+  answerCText: Equestrian
+  answerDText: Snowboarding
+  correctAnswer: 3
+  difficulty: 3
+  questionCategory: Sports

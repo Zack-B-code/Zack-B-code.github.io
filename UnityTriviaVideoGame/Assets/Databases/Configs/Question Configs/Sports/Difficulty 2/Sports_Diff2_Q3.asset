@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef85e673f01023e4d8928e3ff73d3334, type: 3}
+  m_Name: Sports_Diff2_Q3
+  m_EditorClassIdentifier: 
+  questionText: What is the maximum number of players one team can have on the field
+    at the same time in a football game?
+  answerAText: 4
+  answerBText: 20
+  answerCText: 8
+  answerDText: 11
+  correctAnswer: 3
+  difficulty: 2
+  questionCategory: Sports
